@@ -5,7 +5,7 @@ Simple lightbox implementation in plain vanilla Javascript and CSS3.
 
 # See
 
-A demo can be see online at (gersongoulart.github.io/lightbox)[http://gersongoulart.github.io/lightbox]
+A demo can be see online at [gersongoulart.github.io/lightbox](http://gersongoulart.github.io/lightbox)
 
 
 # Build
