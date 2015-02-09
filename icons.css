@@ -1,0 +1,41 @@
+@font-face {
+	font-family: 'lightbox';
+	src:url('fonts/lightbox.eot?-5s4m8u');
+	src:url('fonts/lightbox.eot?#iefix-5s4m8u') format('embedded-opentype'),
+		url('fonts/lightbox.woff?-5s4m8u') format('woff'),
+		url('fonts/lightbox.ttf?-5s4m8u') format('truetype'),
+		url('fonts/lightbox.svg?-5s4m8u#lightbox') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'lightbox';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-print:before {
+	content: "\e600";
+}
+
+.icon-arrow-left:before {
+	content: "\e601";
+}
+
+.icon-arrow-right:before {
+	content: "\e602";
+}
+
+.icon-close:before {
+	content: "\e603";
+}
+

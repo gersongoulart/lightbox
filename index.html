@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="icons.css">
+	<link rel="stylesheet" href="lightbox.css">
+	<style>
+		/* Flickr Thumbnails */
+		#flickr__thumbnails {
+			line-height: 0;
+		}
+		#flickr__thumbnails img {
+			width: 14.28571428571429%;
+			opacity: 1;
+			-webkit-transition: opacity .5s ease;
+			-moz-transition: opacity .5s ease;
+			-ms-transition: opacity .5s ease;
+			transition: opacity .5s ease;
+		}
+		#flickr__thumbnails img:hover {
+			cursor: pointer;
+			opacity: .5;
+		}
+	</style>
+</head>
+<body>
+	<div id="flickr__thumbnails"></div>
+
+	<script src="lightbox.js"></script>
+	<script>
+		window.jsonFlickrApi = function(responseObj){
+			// Create a new Lightbox passing the encessary options.
+			new Lightbox({
+				// `imageCache` should an array containing all photos.
+				// imageCache: [responseObj.photoset.photo[0]], // single image
+				imageCache: responseObj.photoset.photo, // multiple images
+				// `thumbnails` is the id of the thumbnails container.
+				thumbnails: 'flickr__thumbnails',
+				// `imageUrl` is a function that returns the url for the requested image.
+				imageUrl: function(photoObj, sizeStr) {
+					// photo object: farm, id, isfamily, isfriend, isprimary, ispublic, secret, server, title
+					// photo url: https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}_[mstzb].jpg
+					return [
+						'https://farm', photoObj.farm,
+						'.staticflickr.com/', photoObj.server,
+						'/', photoObj.id,
+						'_', photoObj.secret,
+						'_', sizeStr === 'thumbnail' ? 'm' : 'b',
+						'.jpg'
+					].join('');
+				}
+			});
+		}
+	</script>
+	<script src="https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=05d27604f0908b118bf98f67c6965020&photoset_id=72157626579923453&format=json"></script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+@media screen {
+	/** Mask */
+	#lightbox__mask {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		opacity: 0;
+		display: none;
+		overflow:hidden;
+		background: rgba(0, 0, 0, .75);
+		z-index: 99;
+
+		-webkit-transition: opacity 1s ease;
+		-moz-transition: opacity 1s ease;
+		-ms-transition: opacity 1s ease;
+		transition: opacity 1s ease;
+
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+	#lightbox__mask.lightbox__mask--active {
+		display: block;
+
+		-webkit-animation-duration: 0.5s;
+		-webkit-animation-name: fadeInFromNone;
+		-webkit-animation-fill-mode: forwards;
+		-moz-animation-duration: 0.5s;
+		-moz-animation-name: fadeInFromNone;
+		-moz-animation-fill-mode: forwards;
+		-ms-animation-duration: 0.5s;
+		-ms-animation-name: fadeInFromNone;
+		-ms-animation-fill-mode: forwards;
+		animation-duration: 0.5s;
+		animation-name: fadeInFromNone;
+		animation-fill-mode: forwards;
+	}
+
+	#lightbox__mask.lightbox__mask--reverse {
+		-webkit-animation-direction: alternate;
+		-moz-animation-direction: alternate;
+		-ms-animation-direction: alternate;
+		animation-direction: alternate;
+	}
+
+	@-webkit-keyframes fadeInFromNone {
+		0% {
+			display: none; 
+			opacity: 0;
+		}
+
+		1% {
+			display: block;
+			opacity: 0;
+		}
+
+		100% {
+			display: block;
+			opacity: 1;
+		}
+	}
+
+	@keyframes fadeInFromNone {
+		0% {
+			display: none; 
+			opacity: 0;
+		}
+
+		1% {
+			display: block;
+			opacity: 0;
+		}
+
+		100% {
+			display: block;
+			opacity: 1;
+		}
+	}
+
+	#lightbox__mask [class^="icon-"]:before,
+	#lightbox__mask [class*=" icon-"]:before {
+		color: #fff;
+	}
+
+
+	/** Controls */
+	.lightbox__control {
+		padding: .7em;
+		position: absolute;
+		font-size: 1.1em;
+		line-height: 0;
+		text-align: center;
+		border: 2px solid #eee;
+		border-radius: 50%;
+		background: #000;
+		cursor: pointer;
+	}
+
+	#lightbox__prev,
+	#lightbox__next,
+	#lightbox__spinner {
+		margin-top: -2.875em;
+		display: none;
+		top: 50%;
+		left: 50%;
+		-webkit-transition: left .25s ease;
+		-moz-transition: left .25s ease;
+		-ms-transition: left .25s ease;
+		transition: left .25s ease;
+	}
+
+	#lightbox__prev {
+		margin-left: -2.875em;
+	}
+
+	#lightbox__exit {
+		top: 2em;
+		right: 2em;
+	}
+
+	#lightbox__print {
+		top: 2em;
+		right: 6em;
+	}
+
+
+	/** Spinner */
+	#lightbox__spinner {
+		width: 1.4375em;
+		height: 1.4375em;
+		margin-left: -1.4375em;
+		display: block;
+	}
+
+	.lightbox__spinner__double-bounce1,
+	.lightbox__spinner__double-bounce2 {
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		background-color: #fff;
+		opacity: 0.6;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		-webkit-animation: bounce 2.0s infinite ease-in-out;
+		-moz-animation: bounce 2.0s infinite ease-in-out;
+		-ms-animation: bounce 2.0s infinite ease-in-out;
+		animation: bounce 2.0s infinite ease-in-out;
+	}
+
+	.lightbox__spinner__double-bounce2 {
+		-webkit-animation-delay: -1.0s;
+		-moz-animation-delay: -1.0s;
+		-ms-animation-delay: -1.0s;
+		animation-delay: -1.0s;
+	}
+
+	@-webkit-keyframes bounce {
+		0%, 100% {
+			-webkit-transform: scale(0.0);
+			-moz-transform: scale(0.0);
+			-ms-transform: scale(0.0);
+			transform: scale(0.0);
+		}
+		50% {
+			-webkit-transform: scale(1.0);
+			-moz-transform: scale(1.0);
+			-ms-transform: scale(1.0);
+			transform: scale(1.0);
+		}
+	}
+
+	@keyframes bounce {
+		0%, 100% {
+			-webkit-transform: scale(0.0);
+			-moz-transform: scale(0.0);
+			-ms-transform: scale(0.0);
+			transform: scale(0.0);
+		} 50% {
+			-webkit-transform: scale(1.0);
+			-moz-transform: scale(1.0);
+			-ms-transform: scale(1.0);
+			transform: scale(1.0);
+		}
+	}
+
+
+	/** Main container / files */
+	#lightbox__main {
+		height: 100%;
+		text-align: center;
+	}
+
+	.lightbox__file {
+		height: 100%;
+		display: inline-block;
+		position: relative;
+		opacity: 0;
+		vertical-align: middle;
+		font-size:0/0 a;
+		-webkit-transition: opacity .5s ease;
+		-moz-transition: opacity .5s ease;
+		-ms-transition: opacity .5s ease;
+		transition: opacity .5s ease;
+	}
+
+	.lightbox__file--visible {
+		opacity: 1;
+	}
+
+	.lightbox__file > img {
+		max-width: 100%;
+		max-height: 100%;
+		vertical-align: middle;
+		box-shadow: 0 0 2.5em #000;
+	}
+
+	.lightbox__center-image {
+		height: 100%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.lightbox__title {
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		text-align: left;
+		color: #fff;
+		background: rgba(0, 0, 0, .75);
+	}
+
+	.lightbox__title__padding {
+		padding: 1em;
+	}
+}
+
+
+/** Small screens */
+@media screen and (max-width:480px) {
+	#lightbox__exit {
+		top: .5em;
+		right: .5em;
+	}
+
+	#lightbox__print {
+		top: .5em;
+		right: 4em;
+	}
+}
+
+
+/** Print */
+@media print {
+	#lightbox__mask {
+		border: 0!important;
+	}
+
+	.lightbox__control {
+		display: none!important;
+	}
+
+	.lightbox__file,
+	.lightbox__file img {
+		width: 100%;
+	}
+}

@@ -1,0 +1,139 @@
+{
+	"IcoMoonType": "selection",
+	"icons": [
+		{
+			"icon": {
+				"paths": [
+					"M256 64h512v128h-512zM960 256h-896c-35.2 0-64 28.8-64 64v320c0 35.2 28.796 64 64 64h192v256h512v-256h192c35.2 0 64-28.8 64-64v-320c0-35.2-28.8-64-64-64zM704 896h-384v-320h384v320zM974.4 352c0 25.626-20.774 46.4-46.398 46.4-25.626 0-46.402-20.774-46.402-46.4s20.776-46.4 46.402-46.4c25.626 0 46.398 20.774 46.398 46.4z"
+				],
+				"attrs": [],
+				"isMulticolor": false,
+				"tags": [
+					"print",
+					"printer"
+				],
+				"defaultCode": 57366,
+				"grid": 0
+			},
+			"attrs": [],
+			"properties": {
+				"id": 23,
+				"order": 24,
+				"prevSize": 32,
+				"code": 58880,
+				"name": "print",
+				"ligatures": ""
+			},
+			"setIdx": 0,
+			"iconIdx": 23
+		},
+		{
+			"icon": {
+				"paths": [
+					"M704 0l128 128-384 384 384 384-128 128-512-512z"
+				],
+				"attrs": [],
+				"isMulticolor": false,
+				"tags": [
+					"arrow-left"
+				],
+				"defaultCode": 57383,
+				"grid": 0
+			},
+			"attrs": [],
+			"properties": {
+				"id": 40,
+				"order": 41,
+				"prevSize": 32,
+				"code": 58881,
+				"name": "arrow-left",
+				"ligatures": ""
+			},
+			"setIdx": 0,
+			"iconIdx": 40
+		},
+		{
+			"icon": {
+				"paths": [
+					"M320 0l-128 128 384 384-384 384 128 128 512-512z"
+				],
+				"attrs": [],
+				"isMulticolor": false,
+				"tags": [
+					"arrow-right"
+				],
+				"defaultCode": 57384,
+				"grid": 0
+			},
+			"attrs": [],
+			"properties": {
+				"id": 41,
+				"order": 42,
+				"prevSize": 32,
+				"code": 58882,
+				"name": "arrow-right",
+				"ligatures": ""
+			},
+			"setIdx": 0,
+			"iconIdx": 41
+		},
+		{
+			"icon": {
+				"paths": [
+					"M1024 128l-128-128-384 384-384-384-128 128 384 384-384 384 128 128 384-384 384 384 128-128-384-384z"
+				],
+				"attrs": [],
+				"isMulticolor": false,
+				"tags": [
+					"close"
+				],
+				"defaultCode": 57385,
+				"grid": 0
+			},
+			"attrs": [],
+			"properties": {
+				"id": 42,
+				"order": 43,
+				"prevSize": 32,
+				"code": 58883,
+				"name": "close",
+				"ligatures": ""
+			},
+			"setIdx": 0,
+			"iconIdx": 42
+		}
+	],
+	"height": 1024,
+	"metadata": {
+		"name": "lightbox"
+	},
+	"preferences": {
+		"showGlyphs": true,
+		"showQuickUse": true,
+		"showQuickUse2": true,
+		"showSVGs": true,
+		"fontPref": {
+			"prefix": "icon-",
+			"metadata": {
+				"fontFamily": "lightbox",
+				"majorVersion": 1,
+				"minorVersion": 0
+			},
+			"metrics": {
+				"emSize": 1024,
+				"baseline": 6.25,
+				"whitespace": 50
+			},
+			"resetPoint": 58880
+		},
+		"imagePref": {
+			"prefix": "icon-",
+			"png": true,
+			"useClassSelector": true,
+			"color": 4473924,
+			"bgColor": 16777215
+		},
+		"historySize": 100,
+		"showCodes": true
+	}
+}
