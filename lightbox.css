@@ -14,10 +14,10 @@
 		background: rgba(0, 0, 0, .75);
 		z-index: 99;
 
-		-webkit-transition: opacity .5s ease;
-		-moz-transition: opacity .5s ease;
-		-ms-transition: opacity .5s ease;
-		transition: opacity .5s ease;
+		-webkit-transition: opacity 1s ease;
+		-moz-transition: opacity 1s ease;
+		-ms-transition: opacity 1s ease;
+		transition: opacity 1s ease;
 
 		-webkit-touch-callout: none;
 		-webkit-user-select: none;
@@ -27,7 +27,61 @@
 	}
 
 	#lightbox__mask.lightbox__mask--active {
-		opacity: 1;
+		display: block;
+
+		-webkit-animation-duration: 0.5s;
+		-webkit-animation-name: fadeInFromNone;
+		-webkit-animation-fill-mode: forwards;
+		-moz-animation-duration: 0.5s;
+		-moz-animation-name: fadeInFromNone;
+		-moz-animation-fill-mode: forwards;
+		-ms-animation-duration: 0.5s;
+		-ms-animation-name: fadeInFromNone;
+		-ms-animation-fill-mode: forwards;
+		animation-duration: 0.5s;
+		animation-name: fadeInFromNone;
+		animation-fill-mode: forwards;
+	}
+
+	#lightbox__mask.lightbox__mask--reverse {
+		-webkit-animation-direction: alternate;
+		-moz-animation-direction: alternate;
+		-ms-animation-direction: alternate;
+		animation-direction: alternate;
+	}
+
+	@-webkit-keyframes fadeInFromNone {
+		0% {
+			display: none; 
+			opacity: 0;
+		}
+
+		1% {
+			display: block;
+			opacity: 0;
+		}
+
+		100% {
+			display: block;
+			opacity: 1;
+		}
+	}
+
+	@keyframes fadeInFromNone {
+		0% {
+			display: none; 
+			opacity: 0;
+		}
+
+		1% {
+			display: block;
+			opacity: 0;
+		}
+
+		100% {
+			display: block;
+			opacity: 1;
+		}
 	}
 
 	#lightbox__mask [class^="icon-"]:before,
