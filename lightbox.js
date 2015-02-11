@@ -156,7 +156,10 @@
 
 			this.active = true;
 			this.displayImage(startingPhoto);
-			mask.className = this.settings.maskActive;
+			mask.style.display = 'block';
+			setTimeout(function(){
+				mask.className = lightbox.settings.maskActive;
+			}, 100);
 		},
 
 		this.close = function close() {
@@ -165,6 +168,9 @@
 
 			this.active = false;
 			mask.className = mask.className.replace(regexp, '');
+			setTimeout(function(){
+				mask.style.display = 'none';
+			}, 500);
 		},
 
 		this.prev = function prev() {
